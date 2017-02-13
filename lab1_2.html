@@ -10,67 +10,151 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+	body{
+		background-attachment: fixed;
+	}
+</style>
 </head>
 <body background="bg.png">
 <h1 class="jumbotron text-center">Well, here it goes!</h1>
 <div class="container">
-	<table class="table table-striped table-bordered">
-	  <thead>
-		<tr>
-			<th>Random numbers</td>
-			<th class="text-primary">I'm too lazy to name a column</td>
-			<th class="text-success">Maybe, there's a sense</td>
-			<th class="text-info">But it's hidden</td>
-			<th class="text-danger">Behind the curtain</td>
-			<th class="text-muted">Of numbers</td>
-		</tr>
-	  </thead>
-	  <tbody>
-		  <tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		  </tr>
-		  <tr>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-			<td>0</td>
-			<td>1</td>
-			<td>2</td>
-		  </tr>
-		  <tr>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-			<td>7</td>
-			<td>8</td>
-		  </tr>
-		  <tr>
-			<td>9</td>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-		  </tr>
-		  <tr>
-			<td>6</td>
-			<td>7</td>
-			<td>8</td>
-			<td>9</td>
-			<td>1</td>
-			<td>2</td>
-		  </tr>
-	  </tbody>
-	</table>
-</div>
-<div class="container">
-	<p>Well, sometimes we end up where we started and there's no real sense at all.</p>
-</div>
+	<div class="row">
+		<table class="table table-striped table-bordered">
+		  <thead>
+			<tr>
+				<th>Random numbers</th>
+				<th class="text-primary">I'm too lazy to name a column</th>
+				<th class="text-success">Maybe, there's a sense</th>
+				<th class="text-info">But it's hidden</th>
+				<th class="text-danger">Behind the curtain</th>
+				<th class="text-muted">Of numbers</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			  </tr>
+			  <tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+			  </tr>
+			  <tr>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			  </tr>
+			  <tr>
+				<td>9</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			  </tr>
+			  <tr>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>1</td>
+				<td>2</td>
+			  </tr>
+		  </tbody>
+		</table>
+	</div>
+	<div class="row">
+		<p>Well, sometimes we end up where we started and there's no real sense at all.</p>
+	</div>
+	<br style="line-height:15em">
+	<div class="row">
+		<h3 align="center">Feel free to register:</h3>
+		<p align="center">As if someone actually cares to do it</p>
+		<br>
+		<form class="form-horizontal">
+			<fieldset>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="name">Name</label>  
+					<div class="col-md-4">
+						<input id="name" name="name" type="text" placeholder="Type your name here" class="form-control input-md" required="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="login">Login</label>  
+					<div class="col-md-4">
+						<input id="login" name="login" type="text" placeholder="Type your login here" class="form-control input-md" required="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="password">Password</label>
+					<div class="col-md-4">
+						<input id="password" name="password" type="password" placeholder="Type your password here" class="form-control input-md" required="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="sex">Sex</label>
+					<div class="col-md-4">
+						<div class="input-group">
+							<input id="sex" name="sex" class="form-control" placeholder="None" type="text">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									Choose
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu pull-right">
+									<li><a href="#">Male</a></li>
+									<li><a href="#">Female</a></li>
+									<li><a href="#">Hybrid</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="avatar">Avatar</label>
+					<div class="col-md-4">
+						<input id="avatar" name="avatar" class="input-file" type="file">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="about">About yourself</label>
+					<div class="col-md-4">                     
+						<textarea class="form-control" id="about" name="about">Don't be lazy, type something meaningful.</textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="checkboxes">EULA</label>
+					<div class="col-md-4">
+						<div class="checkbox">
+							<label for="checkboxes-0">
+							<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+							I agree to sell my kidney
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="singlebutton"></label>
+					<div class="col-md-4">
+						<button id="singlebutton" name="singlebutton" class="btn btn-primary">Register</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<br style="line-height:5em">
+</div>	
 </body>
 </html>
