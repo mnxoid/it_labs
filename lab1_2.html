@@ -3,13 +3,22 @@
 <head>
 <title>My "first" webpage</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="js/bootstrap.min.css">
 
 <!-- Optional tdeme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-tdeme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-tdeme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="js/bootstrap-theme.min.css">
+
+<!-- <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script> -->
+<script src="js/jquery-1.12.4.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script src="js/bootstrap.min.js"></script>
 <style>
 	body{
 		background-attachment: fixed;
@@ -78,6 +87,10 @@
 	<div class="row">
 		<p>Well, sometimes we end up where we started and there's no real sense at all.</p>
 	</div>
+	<div class="row">
+		<p>Feel free to share my repo
+		<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fgithub.com%2Fmnxoid%2Fit_labs&layout=button_count&size=large&mobile_iframe=true&width=114&height=28&appId" width="114" height="28" style="border:none;overflow:hidden;vertical-align: bottom;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+	</div>
 	<br style="line-height:15em">
 	<div class="row">
 		<h3 align="center">Feel free to register:</h3>
@@ -140,8 +153,31 @@
 						<div class="checkbox">
 							<label for="checkboxes-0">
 							<input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-							I agree to sell my kidney
+							I agree to sell my:
 							</label>
+							<div class="form-group" id="organs">
+								<label class="col-md-1 control-label" for="organs"></label>
+								<div class="col-md-6">
+									<div class="radio">
+										<label for="organs-0">
+										<input type="radio" name="organs" id="organs-0" value="1" checked="checked">
+											Kidney
+										</label>
+									</div>
+									<div class="radio">
+										<label for="organs-1">
+										<input type="radio" name="organs" id="organs-1" value="2">
+										Liver
+										</label>
+									</div>
+									<div class="radio">
+										<label for="organs-2">
+										<input type="radio" name="organs" id="organs-2" value="3">
+										Heart
+										</label>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -149,6 +185,7 @@
 					<label class="col-md-4 control-label" for="singlebutton"></label>
 					<div class="col-md-4">
 						<button id="singlebutton" name="singlebutton" class="btn btn-primary">Register</button>
+						<button id="singlebutton" name="singlebutton" class="btn btn-danger" type="reset">Reset</button>
 					</div>
 				</div>
 			</fieldset>
@@ -156,5 +193,18 @@
 	</div>
 	<br style="line-height:5em">
 </div>	
+<script language="javascript">
+	$(document).ready(function() {
+	    $(".dropdown-toggle").dropdown();
+	    $(".dropdown-menu>li>a").on("click",function(e) {
+	    	e.preventDefault();
+	    	$("#sex").val($(e.target).text());
+	    });
+	    $("#organs :input").prop("disabled", true);
+	    $("#checkboxes-0").on("change", function(e){
+	    	$("#organs :input").prop("disabled", !$("#organs :input").prop("disabled"));
+	    });
+	});
+</script>
 </body>
 </html>
