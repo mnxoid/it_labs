@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title> Script_01 </title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="demo-code">
+		<xmp>
+<html>
+<script language "JavaScript">
+	theTime = new Date();
+	theHour = theTime.getHours();
+	if (11 > theHour)
+		document.writeln("<body bgcolor='red' text='Black'>");
+	else
+		document.writeln("<body bgcolor='green' text='White'>");
+</script>
+This text is going to be white on green during the day 
+and black on red during the night
+</body>
+</html>
+		</xmp>
+	</div>
+	<div class="demo-result">
+		<script language "JavaScript">
+			theTime = new Date();
+			theHour = theTime.getHours();
+			var res = document.getElementsByClassName("demo-result")[0];
+			if (11 > theHour){
+				res.style.color = "black";
+				res.style.background = "red";
+			}else{
+				res.style.color = "white";
+				res.style.background = "green";
+			}
+		</script>
+		This text is going to be white on green during the day 
+		and black on red during the night
+	</div>
+</div>
+
+</body>
+</html>

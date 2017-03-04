@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lab 2</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/d3.v2.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<center>
+		<h1>Function tabulation</h1>
+	</center>
+	<div class="container">
+		<div id="test1">
+			<svg></svg>
+		</div>
+		<div style="height: 60vh; flex: 1 ; overflow-y: scroll; border: 3px dashed black; display: inline-block;">
+			<table border="1" width="100%">
+				<caption>Raw data:</caption>
+				<thead>
+					<tr>
+						<th>x</th>
+						<th>f(x)</th>
+					</tr>
+				</thead>
+				<tbody id="raw-data-target">
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div>
+		<p>Some js demo pages:</p>
+		<p>
+			<ul>
+				<li><a href="demo1.html">Type conversion</a></li>
+				<li><a href="demo2.html">If-clause and Date class usage</a></li>
+			</ul>
+		</p>
+	</div>
+	<script type="text/javascript" src="js/d3chart.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
